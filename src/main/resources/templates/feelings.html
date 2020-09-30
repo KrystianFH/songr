@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Our Feelings</h1>
+    <table>
+        <tr>
+            <th>Emotion</th>
+            <th>Who</th>
+            <th>Why</th>
+            <th>How</th>
+            <th>Laughing</th>
+        </tr>
+        <tr th:each="feeling : ${feelings}">
+            <td th:text="${feeling.feeling}">Happy</td>
+            <td th:text="${feeling.personHavingIt}">Nich</td>
+            <td th:text="{feeling.reason}">Teaching cool peeps</td>
+            <td th:text="{feeling.level}">9</td>
+            <td th:text="{feeling.causesUsToLaugh}">false</td>
+        </tr>
+    </table>
+</body>
+</html>
