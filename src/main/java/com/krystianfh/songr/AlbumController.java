@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import java.util.ArrayList;
 
 @Controller
-public class EmotionController {
+public class AlbumController {
 
 //    @Autowired
 //    public EmotionRepository emotionRepository;
@@ -29,33 +29,33 @@ public class EmotionController {
 //    }
 
     @GetMapping("/emotions")
-    public String showEmotions(Model m){
-//        ArrayList<Emotion> emotions = (ArrayList<Emotion>) emotionRepository.findAll();
-        ArrayList<Emotion> emotions = new ArrayList<>();
-        emotions.add(new Emotion(
-                "chill",
-                true,
-                "Jack",
-                2,
-                "Cause I am learning"
+    public String showAlbums(Model m){
+//        ArrayList<Album> albums = (ArrayList<Album>) albumRepository.findAll();
+        ArrayList<Album> albums = new ArrayList<>();
+        albums.add(new Album(
+                "some name",
+                "some artist",
+                19,
+                600,
+                "http://www.someurl.com"
         ));
-        emotions.add(new Emotion(
-                "Happy",
-                false,
-                "Matthew",
-                9,
-                "Wife just got home"
+        albums.add(new Album(
+                "some other name",
+                "some other artist",
+                14,
+                400,
+                "http://www.someotherurl.com"
         ));
-        emotions.add(new Emotion(
-                "Satisfied",
-                false,
-                "Paul",
-                7,
-                "Not talking on phone anymore"
+        albums.add(new Album(
+                "another title",
+                "another artist",
+                18,
+                741,
+                "http://www.anotherurl.com"
         ));
 
-        m.addAttribute("feelings", emotions);
-        return "feelings";
+        m.addAttribute("title", albums);
+        return "title";
     }
 
 
