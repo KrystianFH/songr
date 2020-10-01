@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Album</h1>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Artist</th>
+            <th>Number of Songs</th>
+            <th>Album Length</th>
+            <th>Album Cover</th>
+        </tr>
+        <tr th:each="album : ${albums}">
+            <td th:text="${album.title}">Screaming Name</td>
+            <td th:text="${album.artist}">Jerry Role</td>
+            <td th:text="{album.songCount}">19</td>
+            <td th:text="{album.length}">1155</td>
+            <td th:text="{album.imageUrl}">http://www.brokenimage.com</td>
+        </tr>
+    </table>
+</body>
+</html>
