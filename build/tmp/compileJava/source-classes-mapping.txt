@@ -1,10 +1,14 @@
 com/krystianfh/songr/HomeController.java
  com.krystianfh.songr.HomeController
-com/krystianfh/songr/Album.java
- com.krystianfh.songr.Album
-com/krystianfh/songr/AlbumRepository.java
- com.krystianfh.songr.AlbumRepository
-com/krystianfh/songr/SongrApplication.java
- com.krystianfh.songr.SongrApplication
 com/krystianfh/songr/AlbumController.java
  com.krystianfh.songr.AlbumController
+com/krystianfh/songr/AlbumNotFoundException.java
+ com.krystianfh.songr.AlbumNotFoundException
+com/krystianfh/songr/AlbumRepository.java
+ com.krystianfh.songr.AlbumRepository
+com/krystianfh/songr/HelloController.java
+ com.krystianfh.songr.HelloController
+com/krystianfh/songr/SongrApplication.java
+ com.krystianfh.songr.SongrApplication
+com/krystianfh/songr/Album.java
+ com.krystianfh.songr.Album

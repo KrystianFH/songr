@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-<head>
+<html lang="en" , xmlns:th="http://www.thymeleaf.org"><head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
@@ -21,6 +20,15 @@
             <td th:text="{album.length}">1155</td>
             <td th:text="{album.imageUrl}">http://www.brokenimage.com</td>
         </tr>
+        <form action="/albums" method="post"><tr>
+            <td>id</td>
+            <td><input placeholder="title" type="text" name="title"></td>
+            <td><input placeholder="artist" type="text" name="artist"></td>
+            <td><input placeholder="song count" type="number" name="songCount"></td>
+            <td><input placeholder="length" type="number" name="length"></td>
+            <td><input placeholder="image URL" type="text" name="imageUrl"></td>
+            <td><button type="submit">Create New Album</button></td>
+        </tr></form>
     </table>
 </body>
 </html>
