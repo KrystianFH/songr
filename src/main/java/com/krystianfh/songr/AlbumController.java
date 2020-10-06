@@ -83,11 +83,11 @@ public class AlbumController {
         Optional<Album> repoAlbum = this.albumRepository.findById(id);
         if(repoAlbum.isPresent()){
             Album editedAlbum = repoAlbum.get();
-            editedAlbum.title = album.title;
-            editedAlbum.artist = album.artist;
-            editedAlbum.songCount = album.songCount;
-            editedAlbum.length = album.length;
-            editedAlbum.imageUrl = album.imageUrl;
+            editedAlbum.setTitle(album.getTitle());
+            editedAlbum.setArtist(album.getArtist());
+            editedAlbum.setSongCount(album.getSongCount());
+            editedAlbum.setLength(album.getLength());
+            editedAlbum.setImageUrl(album.getImageUrl());
 
             albumRepository.save(editedAlbum);
             return editedAlbum;
