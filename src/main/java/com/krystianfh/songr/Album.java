@@ -2,11 +2,9 @@ package com.krystianfh.songr;
 
 import com.fasterxml.jackson.annotation.JsonTypeId;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Date;
+import java.util.List;
 
 
 @Entity
@@ -16,11 +14,15 @@ public class Album {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    public String title;
-    public String artist;
-    int songCount;
-    int length;
-    String imageUrl;
+
+
+    private String title;
+    private String artist;
+    private int songCount;
+    private int length;
+    private String imageUrl;
+    @OneToMany(mappedBy = "album")
+    private List<Song> songList;
 
     public Album(long id, String title, String artist, int songCount, int length, String imageUrl) {
         this.id = id;
@@ -55,6 +57,34 @@ public class Album {
 
     public String getImageUrl() {
         return imageUrl;
+    }
+
+    public List<Song> getSongList() {
+        return songList;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setArtist(String artist) {
+        this.artist = artist;
+    }
+
+    public void setSongCount(int songCount) {
+        this.songCount = songCount;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    public void setSongList(List<Song> songList) {
+        this.songList = songList;
     }
 
 }
