@@ -20,7 +20,7 @@ public class AlbumController {
     @Autowired
     public AlbumRepository albumRepository;
 
-    @PostMapping("/")
+    @PostMapping("/albums")
     public RedirectView addAlbum(long id, String title, String author, int songCount, int length, String imageUrl){
         Album newAlbum = new Album(
                 id,
@@ -36,7 +36,7 @@ public class AlbumController {
 
     }
 
-    @GetMapping("/")
+    @GetMapping("/albums")
     public String showAlbums(Model m){
 
         Album album1 = new Album(
